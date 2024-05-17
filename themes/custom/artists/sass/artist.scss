@@ -1,0 +1,97 @@
+.user-wrapper {
+  display: flex;
+  gap: 150px;
+
+  .user-picture-wrapper,
+  .user-spec-wrapper {
+    flex: 1;
+  }
+
+  .photo-gallery {
+    img {
+      width: 110px;
+      height: 146px;
+    }
+  }
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.user-exp-title,
+.user-voice-title {
+  text-align: center;
+  font-size: 56px;
+  line-height: 1.3em;
+  text-align: center;
+}
+
+.user-exp {
+  max-width: 60%;
+  margin: auto;
+
+  .paragraph--type--work-duration {
+    width: fit-content;
+    display: flex;
+
+    .field--name-field-start-date {
+      &::after {
+        content: "-";
+        margin-right: 3px;
+      }
+    }
+  }
+}
+
+.user-exp,
+.user-voice-exp {
+  strong,
+  .acting_experience_title {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.35);
+    letter-spacing: 5px;
+    line-height: 2em;
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin: 50px 0;
+  }
+
+  li,
+  .voice-characteristics {
+    font-weight: 700;
+    list-style: none;
+    text-align: center;
+  }
+
+  .field__label {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.35);
+    margin: 20px 0;
+  }
+}
+
+.user-exp-wrapper {
+  padding: 50px 0;
+  border-bottom: 2px solid #5245451a;
+}
+
+.user-voice-exp {
+  max-width: 60%;
+  margin: auto;
+  padding: 50px 0;
+
+  .audio-sample {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,266 @@
+.user-wrapper {
+  display: flex;
+  gap: 150px; }
+  .user-wrapper .user-picture-wrapper,
+  .user-wrapper .user-spec-wrapper {
+    flex: 1; }
+  .user-wrapper .photo-gallery img {
+    width: 110px;
+    height: 146px; }
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box; }
+
+.user-exp-title,
+.user-voice-title {
+  text-align: center;
+  font-size: 56px;
+  line-height: 1.3em;
+  text-align: center; }
+
+.user-exp {
+  max-width: 60%;
+  margin: auto; }
+  .user-exp .paragraph--type--work-duration {
+    width: fit-content;
+    display: flex; }
+    .user-exp .paragraph--type--work-duration .field--name-field-start-date::after {
+      content: "-";
+      margin-right: 3px; }
+
+.user-exp strong,
+.user-exp .acting_experience_title,
+.user-voice-exp strong,
+.user-voice-exp .acting_experience_title {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.35);
+  letter-spacing: 5px;
+  line-height: 2em;
+  text-align: center;
+  width: 100%;
+  display: block;
+  margin: 50px 0; }
+
+.user-exp li,
+.user-exp .voice-characteristics,
+.user-voice-exp li,
+.user-voice-exp .voice-characteristics {
+  font-weight: 700;
+  list-style: none;
+  text-align: center; }
+
+.user-exp .field__label,
+.user-voice-exp .field__label {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.35);
+  margin: 20px 0; }
+
+.user-exp-wrapper {
+  padding: 50px 0;
+  border-bottom: 2px solid #5245451a; }
+
+.user-voice-exp {
+  max-width: 60%;
+  margin: auto;
+  padding: 50px 0; }
+  .user-voice-exp .audio-sample {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+
+.paragraph--type--actors {
+  padding: 50px 0; }
+  .paragraph--type--actors .view_title h2 {
+    font-size: 56px;
+    line-height: 1.3em;
+    text-align: center; }
+  .paragraph--type--actors .view_title h3 {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #3f0000ad !important;
+    letter-spacing: 5px;
+    line-height: 2em;
+    text-align: center; }
+  .paragraph--type--actors .actors-view {
+    width: 90%;
+    margin: 50px auto 0;
+    display: grid;
+    column-gap: 4em;
+    row-gap: 2em;
+    grid-template-columns: repeat(auto-fill, minmax(13%, 1fr));
+    position: relative;
+    min-height: 400px; }
+    .paragraph--type--actors .actors-view img {
+      width: -webkit-fill-available;
+      height: auto; }
+    .paragraph--type--actors .actors-view .pager {
+      position: absolute;
+      bottom: 0;
+      height: 25px;
+      right: 50%; }
+    .paragraph--type--actors .actors-view .username {
+      font-weight: 600 !important;
+      font-size: 16px !important;
+      color: #3f0000ad !important; }
+
+.field--name-field-banner {
+  background-color: black;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px; }
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px; }
+  .menu .menu-item {
+    margin: 0;
+    padding: 20px;
+    list-style: none; }
+    .menu .menu-item a {
+      font-weight: normal;
+      font-style: normal;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: rgba(0, 0, 0, 0.6); }
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between; }
+  .nav-wrapper .logo {
+    width: auto;
+    height: 50px;
+    padding: 10px; }
+
+.paragraph--type--actors {
+  padding: 50px 0; }
+  .paragraph--type--actors .view_title h2 {
+    font-size: 56px;
+    line-height: 1.3em;
+    text-align: center; }
+  .paragraph--type--actors .view_title h3 {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #3f0000ad !important;
+    letter-spacing: 5px;
+    line-height: 2em;
+    text-align: center; }
+  .paragraph--type--actors .actors-view {
+    width: 90%;
+    margin: 50px auto 0;
+    display: grid;
+    column-gap: 4em;
+    row-gap: 2em;
+    grid-template-columns: repeat(auto-fill, minmax(13%, 1fr));
+    position: relative;
+    min-height: 400px; }
+    .paragraph--type--actors .actors-view img {
+      width: -webkit-fill-available;
+      height: auto; }
+    .paragraph--type--actors .actors-view .pager {
+      position: absolute;
+      bottom: 0;
+      height: 25px;
+      right: 50%; }
+    .paragraph--type--actors .actors-view .username {
+      font-weight: 600 !important;
+      font-size: 16px !important;
+      color: #3f0000ad !important; }
+
+.field--name-field-banner {
+  background-color: black;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px; }
+
+.user-wrapper {
+  display: flex;
+  gap: 150px; }
+  .user-wrapper .user-picture-wrapper,
+  .user-wrapper .user-spec-wrapper {
+    flex: 1; }
+  .user-wrapper .photo-gallery img {
+    width: 110px;
+    height: 146px; }
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box; }
+
+.user-exp-title,
+.user-voice-title {
+  text-align: center;
+  font-size: 56px;
+  line-height: 1.3em;
+  text-align: center; }
+
+.user-exp {
+  max-width: 60%;
+  margin: auto; }
+  .user-exp .paragraph--type--work-duration {
+    width: fit-content;
+    display: flex; }
+    .user-exp .paragraph--type--work-duration .field--name-field-start-date::after {
+      content: "-";
+      margin-right: 3px; }
+
+.user-exp strong,
+.user-exp .acting_experience_title,
+.user-voice-exp strong,
+.user-voice-exp .acting_experience_title {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.35);
+  letter-spacing: 5px;
+  line-height: 2em;
+  text-align: center;
+  width: 100%;
+  display: block;
+  margin: 50px 0; }
+
+.user-exp li,
+.user-exp .voice-characteristics,
+.user-voice-exp li,
+.user-voice-exp .voice-characteristics {
+  font-weight: 700;
+  list-style: none;
+  text-align: center; }
+
+.user-exp .field__label,
+.user-voice-exp .field__label {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.35);
+  margin: 20px 0; }
+
+.user-exp-wrapper {
+  padding: 50px 0;
+  border-bottom: 2px solid #5245451a; }
+
+.user-voice-exp {
+  max-width: 60%;
+  margin: auto;
+  padding: 50px 0; }
+  .user-voice-exp .audio-sample {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }

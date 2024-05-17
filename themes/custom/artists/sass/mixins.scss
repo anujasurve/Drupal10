@@ -1,0 +1,31 @@
+// Media query mixins
+@mixin media-small {
+  @media (min-width: $breakpoint-small) {
+    @content;
+  }
+}
+
+@mixin media-medium {
+  @media (min-width: $breakpoint-medium) {
+    @content;
+  }
+}
+
+@mixin media-large {
+  @media (min-width: $breakpoint-large) {
+    @content;
+  }
+}
+
+// Flexbox mixins
+@mixin flexbox() {
+  display: flex;
+}
+
+@mixin flex-align($align) {
+  align-items: $align;
+}
+
+@mixin flex-justify($justify) {
+  justify-content: $justify;
+}

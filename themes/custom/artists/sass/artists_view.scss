@@ -1,0 +1,49 @@
+.paragraph--type--actors {
+  padding: 50px 0;
+
+  .view_title {
+    h2 {
+      font-size: 56px;
+      line-height: 1.3em;
+      text-align: center;
+    }
+
+    h3 {
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 18px;
+      color: #3f0000ad !important;
+      letter-spacing: 5px;
+      line-height: 2em;
+      text-align: center;
+    }
+  }
+  .actors-view {
+    width: 90%;
+    margin: 50px auto 0;
+    display: grid;
+    column-gap: 4em;
+    row-gap: 2em;
+    grid-template-columns: repeat(auto-fill, minmax(13%, 1fr));
+    position: relative;
+    min-height: 400px;
+
+    img {
+      width: -webkit-fill-available;
+      height: auto;
+    }
+
+    .pager {
+      position: absolute;
+      bottom: 0;
+      height: 25px;
+      right: 50%;
+    }
+
+    .username {
+      font-weight: 600 !important;
+      font-size: 16px !important;
+      color: #3f0000ad !important;
+    }
+  }
+}

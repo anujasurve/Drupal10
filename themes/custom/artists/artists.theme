@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the artists theme.
+ */
+
+
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for form_element.
+ */
+
+function artists_theme_suggestions_views_view_unformatted_alter(&$suggestions, $variables) {
+    $suggestions[] = 'views_view_unformatted__' . $variables['view']->id();
+}
+
+function artists_theme_suggestions_views_view_alter(&$suggestions, $variables) {
+    $suggestions[] = 'views_view__' . $variables['view']->id();
+}

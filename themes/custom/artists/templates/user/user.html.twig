@@ -1,0 +1,144 @@
+{#
+  Theme override to present all user data.
+
+  This template is used when viewing a registered user's page,
+  e.g., example.com/user/123. 123 being the user's ID.
+
+  Available variables:
+  - content: A list of content items. Use 'content' to print all content, or
+    print a subset such as 'content.field_example'. Fields attached to a user
+    such as 'user_picture' are available as 'content.user_picture'.
+  - attributes: HTML attributes for the container element.
+  - user: A Drupal User entity.
+
+  @see template_preprocess_user()
+#}
+
+{# Set classes for the container #}
+{% set classes = [
+  'profile',
+  'container',
+] %}
+
+{# Format the username #}
+{% set formattedUsername = user.displayName|split('_')|join(' ') %}
+
+<article{{ attributes.addClass(classes) }}>
+
+  <div class="user-wrapper">
+    <div class="user-picture-wrapper">
+      {# Display user profile picture if available #}
+      {% if user.field_profile_photo.entity %}
+        <div class="user-picture">
+          <img src="{{ file_url(user.field_profile_photo.entity.uri.value) }}" alt="{{ user.displayName }}">
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="user-spec-wrapper">
+      <h1>{{ formattedUsername }}</h1>
+      
+      {# Display user details #}
+      {% if user.field_age %}
+        <div class="age">
+          <strong>Age:</strong> {{ user.field_age.value }}
+        </div>
+      {% endif %}
+      
+      {% if user.field_eyes %}
+        <div class="eyes">
+          <strong>Eyes Color:</strong> {{ user.field_eyes.value }}
+        </div>
+      {% endif %}
+      
+      {% if user.field_hair %}
+        <div class="hair">
+          <strong>Hair Color:</strong> {{ user.field_hair.value }}
+        </div>
+      {% endif %}
+      
+      {% if user.field_height %}
+        {% set height_value = user.field_height.value %}
+        {% set height_unit = user.field_height.unit %}
+        <div class="height">
+          <strong>Height:</strong> {{ height_value }} {{ height_unit }}
+        </div>
+      {% endif %}
+      
+      {% if user.field_languages %}
+        <div class="languages">
+          <strong>Languages:</strong>
+          <ul>
+            {% for language in user.field_languages %}
+              <li>{{ language.value }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+      
+      {% if user.field_location %}
+        <div class="location">
+          <strong>Location:</strong> {{ user.field_location.value }}
+        </div>
+      {% endif %}
+      
+      {% if user.user_picture %}
+        <div class="profile-photos">
+          <strong>Profile Photos:</strong>
+          <div class="photo-gallery">
+            {% for photo_item in user.user_picture %}
+              {% if photo_item.entity %}
+                <img src="{{ file_url(photo_item.entity.uri.value) }}" alt="{{ user.displayName }}">
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</article>
+
+{# User experience section #}
+<div class="user-exp-wrapper">
+  <div class="user-exp">
+    <h2 class="user-exp-title">Acting</h2>
+    {% if user.field_skills %}
+      <div class="skills">
+        <strong>Skills:</strong>
+        <ul>
+          {% for skill in user.field_skills %}
+            <li>{{ skill.value }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+    {% if content.field_acting_experience %}
+      <div class="acting_experience">
+        <h2 class="acting_experience_title">Acting Experience</h2>
+        {{ content.field_acting_experience }}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{# Display voice characteristics and audio sample if available #}
+<div class="user-voice-exp">
+
+<h2 class="user-voice-title">Voice</h2>
+
+  {% if user.field_voice_characteristics %}
+    <div class="voice-characteristics">
+      <strong>Voice Characteristics:</strong> {{ user.field_voice_characteristics.value }}
+    </div>
+  {% endif %}
+
+  {% if user.field_audio_sample %}
+    <div class="audio-sample">
+      <strong>Audio Sample:</strong>
+      <audio controls>
+        <source src="{{ file_url(user.field_audio_sample.entity.uri.value) }}" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  {% endif %}
+</div>

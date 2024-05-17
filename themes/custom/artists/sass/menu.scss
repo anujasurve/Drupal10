@@ -1,0 +1,30 @@
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+
+  .menu-item {
+    margin: 0;
+    padding: 20px;
+    list-style: none;
+
+    a {
+      font-weight: normal;
+      font-style: normal;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: rgba(0, 0, 0, 0.6);
+    }
+  }
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  .logo {
+    width: auto;
+    height: 50px;
+    padding: 10px;
+  }
+}
